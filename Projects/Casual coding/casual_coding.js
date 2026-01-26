@@ -1,8 +1,14 @@
-let a = 5;
-console.log("The value of a is:", a);
+let value = document.getElementById("numberInput");
 
-a = 6;
-console.log("The new value of a is:", a);
+if (document.getElementById("numberInput")) {
+    document.getElementById("numberInput").addEventListener("input", function() {
+        if (value > 5) {
+            document.querySelector(".temp").style.backgroundColor = "red";
+        } else {
+            document.querySelector(".temp").style.backgroundColor = "blue";
+        }
+    });
+}
 
-let name = prompt("What is your name?");
-console.log("Hello, " + name + "!");
+let num1 = Math.floor(Math.random() * 10);
+console.log(num1);
